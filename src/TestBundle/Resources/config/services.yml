@@ -1,0 +1,5 @@
+services:
+    test.listener:
+        class: TestBundle\EventListener\TestListener
+        tags:
+            - { name: kernel.event_listener, event: the_room.telegram.bot.web_hook_request_created, method: testMethod }
